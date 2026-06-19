@@ -4,7 +4,7 @@ st.set_page_config(page_title="App Tính Thuế TNCN Việt Nam 2026", page_icon
 # --- CHÈN LOGO THEO FILE TRỰC TIẾP ---
 st.image("logo.jpg")
 # --- THÔNG TIN THÀNH VIÊN VÀ ĐỀ TÀI ---
-st.markdown("### 📝 **TS. VŨ ĐỨC BÌNH**")
+st.markdown("### 📝 ** Nguyễn Minh Tâm **")
 st.title("💰 Ứng Dụng Tính Thuế Thu Nhập Cá Nhân")
 st.write("Cập nhật đầy đủ Lương, Thưởng, Tăng ca, Phụ cấp theo luật thuế mới nhất năm 2026")
 st.markdown("---")
@@ -70,7 +70,7 @@ if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
     * **Tổng thu nhập phát sinh trong tháng:** `{res['total_income']:,.0f} VND`
     * **Các khoản được miễn trừ thuế:**
         * Tiền lương tăng ca: `{overtime_pay:,.0f} VND`
-        * Tiền ăn trưa được miễn: `{res['exempt_lunch']:,.0f} VND`
+        * Tiền ăn trưa được miễn: (`{res['exempt_lunch']:,.0f} VND`)
         * Phụ cấp công việc (xăng xe, điện thoại): `{res['exempt_allowance']:,.0f} VND`
     * **Các khoản phí bảo hiểm bắt buộc trích từ lương chính:**
         * BHXH (8%): `{res['bhxh']:,.0f} VND` | BHYT (1.5%): `{res['bhyt']:,.0f} VND` | BHTN (1%): `{res['bhtn']:,.0f} VND`
