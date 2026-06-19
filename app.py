@@ -80,7 +80,7 @@ if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
     * Giảm trừ người phụ thuộc: `{res['dependent_reduction']:,.0f} VND` (cho {dependents} người)
     * **Thu nhập tính thuế (đưa vào bảng lũy tiến):** `{res.get('assessable_income', 0):,.0f} VND`""")
     if res.get('tax', 0) > 0:
-    st.write("📊 **Chi tiết phân tách số tiền nộp theo biểu thuế lũy tiến mới:**")
-    st.table(res.get('tax_breakdown', []))
-else:
+        st.write("📊 **Chi tiết phân tách số tiền nộp theo biểu thuế lũy tiến mới:**")
+        st.table(res.get('tax_breakdown', []))
+      else:
         st.success("Tuyệt vời! Sau khi trừ các khoản phụ cấp miễn thuế và giảm trừ gia cảnh, thu nhập tính thuế của bạn bằng 0 nên không cần phải nộp thuế TNCN.")
