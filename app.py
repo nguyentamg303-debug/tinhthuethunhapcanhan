@@ -82,5 +82,5 @@ if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
     if res.get('tax', 0) > 0:
         st.write("📊 **Chi tiết phân tách số tiền nộp theo biểu thuế lũy tiến mới:**")
         st.table(res.get('tax_breakdown', []))
-      else:
+    else:
         st.success("Tuyệt vời! Sau khi trừ các khoản phụ cấp miễn thuế và giảm trừ gia cảnh, thu nhập tính thuế của bạn bằng 0 nên không cần phải nộp thuế TNCN.")
