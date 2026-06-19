@@ -79,7 +79,7 @@ if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
         * Giảm trừ bản thân người nộp: `15,500,000 VND`
     * Giảm trừ người phụ thuộc: `{res['dependent_reduction']:,.0f} VND` (cho {dependents} người)
     * **Thu nhập tính thuế (đưa vào bảng lũy tiến):** `{res['assessable_income']:,.0f} VND`""")
-      if res['tax'] > 0:
+    if res['tax'] > 0:
         st.write("📊 **Chi tiết phân tách số tiền nộp theo biểu thuế 5 bậc mới (2026):**")
         st.table(res['tax_breakdown'])
     else:
