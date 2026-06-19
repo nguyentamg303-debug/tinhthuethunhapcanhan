@@ -49,10 +49,10 @@ def tinh_thue_tncn(gross, bonus, overtime, lunch, other, deps):
             tax_breakdown.append({"Bậc thuế": b["desc"],"Thu nhập tính thuế ở bậc này": f"{taxable_in_bracket:,.0f} VND","Tiền thuế phải nộp": f"{tax_in_bracket:,.0f} VND"})
             temp_income -= taxable_in_bracket
             previous_limit = b["limit"]
-            else:
-                break
-            net_salary = total_income - total_insurance - tax
-            return {"total_income": total_income, "bhxh": bhxh, "bhyt": bhyt, "bhtn": bhtn,"total_insurance": total_insurance, "dependent_reduction": dependent_reduction,"exempt_lunch": exempt_lunch, "exempt_allowance": exempt_allowance,"assessable_income": assessable_income, "tax": tax, "net_salary": net_salary,"tax_breakdown": tax_breakdown}
+    else:
+        break
+    net_salary = total_income - total_insurance - tax
+    return {"total_income": total_income, "bhxh": bhxh, "bhyt": bhyt, "bhtn": bhtn,"total_insurance": total_insurance, "dependent_reduction": dependent_reduction,"exempt_lunch": exempt_lunch, "exempt_allowance": exempt_allowance,"assessable_income": assessable_income, "tax": tax, "net_salary": net_salary,"tax_breakdown": tax_breakdown}
 # --- PHẦN NÚT BẤM KÍCH HOẠT VÀ HIỂN THỊ KẾT QUẢ ---
 if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
     res = tinh_thue_tncn(gross_salary, gross_bonus_pay, overtime_pay, lunch_allowance, other_allowance, dependents)
