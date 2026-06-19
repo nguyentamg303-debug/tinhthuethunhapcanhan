@@ -12,7 +12,7 @@ st.markdown("---")
 st.subheader("📋 Nhập thông tin thu nhập tháng này của bạn")
 gross_salary = st.number_input("1. Lương đóng BHXH (VND):", min_value=0, value=30000000, step=500000, format="%d")
 gross_bonus_pay = st.number_input("2. Tiền thưởng / Bonus (VND):", min_value=0, value=0, step=500000, format="%d")
- overtime_pay= st.number_input("3. Tiền lương tăng ca / làm thêm giờ (VND):",min_value=0, value=0, step=500000, format="%d")
+overtime_pay= st.number_input("3. Tiền lương tăng ca / làm thêm giờ (VND):",min_value=0, value=0, step=500000, format="%d")
 st.markdown("**4. Các khoản phụ cấp nhận bằng tiền mặt:**")
 col_sub1, col_sub2 = st.columns(2)
 with col_sub1:
