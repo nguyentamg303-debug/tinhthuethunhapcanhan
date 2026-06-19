@@ -70,7 +70,7 @@ if st.button("🧮 Tính Thuế & Nhận Kết Quả", type="primary"):
     * **Tổng thu nhập phát sinh trong tháng:** `{res['total_income']:,.0f} VND`
     * **Các khoản được miễn trừ thuế:**
         * Tiền lương tăng ca: `{overtime_pay:,.0f} VND`
-        * Tiền ăn trưa được miễn: `{res['exempt_lunch']:,.0f} VND`
+        st.write(f"* Tiền ăn trưa được miễn: `{res['exempt_lunch']:,.0f} VND`")
         * Phụ cấp công việc (xăng xe, điện thoại): `{res['exempt_allowance']:,.0f} VND`
     * **Các khoản phí bảo hiểm bắt buộc trích từ lương chính:**
         * BHXH (8%): `{res['bhxh']:,.0f} VND` | BHYT (1.5%): `{res['bhyt']:,.0f} VND` | BHTN (1%): `{res['bhtn']:,.0f} VND`
